@@ -1,0 +1,10 @@
+#image {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+#title h2 {
+    text-align: center;
+}

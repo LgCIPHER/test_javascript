@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>test_Javascript</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id = "title">
+            <h2>
+                Touch the image to see "magic"
+            </h2>
+        </div>
+        <div id = "content">
+            <img
+                src = "Triangle_revolution.jpg"
+                id = "image"
+                height = "250px"
+                width = "250px"
+            />
+        </div>
+        <span id = "status">
+            magic
+        </span>
+    </body>
+    <script>
+        function playSound(){
+            const audio = new Audio('Bruh_Sound_Effect.mp3');
+            audio.play();
+        }
+
+        const image = document.querySelector('#image');
+        const status = document.querySelector('#status');
+        
+        image.onclick = () => {
+            playSound();
+            image.style.width = "300px";
+            image.style.height = "300px";
+            status.innerText = ":v";
+            setTimeout(() => {
+                image.style.width = "250px";
+                image.style.height = "250px";
+                status.innerText = "magic";
+            }, 1000);            
+        }
+    </script>
+</html>
